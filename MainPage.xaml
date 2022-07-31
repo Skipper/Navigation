@@ -1,0 +1,143 @@
+﻿<Page
+    x:Class="Navegador.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navegador"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d"
+    Height="600"
+    Width="1080"
+    Background="#FF3A3A3A">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Latitude, Longitude -->
+        <Grid 
+            Grid.Row="0" 
+            Grid.Column="0" 
+            Padding="0"
+            Margin="24,0,24,0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Origen -->
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="0">
+
+                <TextBox
+                    x:Name="tb_latitude_origen"
+                    Header="Latitude Origen"
+                    Margin="5" 
+                    AcceptsReturn="True" 
+                    TextWrapping="Wrap" 
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                    IsReadOnly="False"/>
+
+            </Grid>
+            <Grid 
+                Grid.Row="1" 
+                Grid.Column="0">
+                
+                <TextBox 
+                    x:Name="tb_longitude_origen" 
+                    Header="Longitude Origen" 
+                    Margin="5" 
+                    AcceptsReturn="True" 
+                    TextWrapping="Wrap" 
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                    IsReadOnly="False"/>
+            </Grid>
+
+            <!-- Espacio -->
+
+            <!-- Destino -->
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="2">
+
+                <TextBox
+                    x:Name="tb_latitude_destino"
+                    Header="Latitude Origen"
+                    Margin="5"/>
+
+            </Grid>
+            <Grid 
+                Grid.Row="1" 
+                Grid.Column="2">
+
+                <TextBox 
+                    x:Name="tb_longitude_destino" 
+                    Header="Longitude Origen" 
+                    Margin="5" 
+                    AcceptsReturn="True" 
+                    TextWrapping="Wrap" 
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                    IsReadOnly="False"/>
+            </Grid>
+
+        </Grid>
+
+        
+        <!-- Trazar ruta -->
+        <Grid 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            Margin="333, 10, 333, 10">
+            
+            <Button 
+                x:Name="btn_trazar_ruta_title"
+                Content="Trazar ruta" 
+                Background="White"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" 
+                Click="btn_trazar_ruta"/>
+        </Grid>
+
+        <!-- Mapa -->
+        <Grid 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Padding="0, 10, 0, 0" 
+            Background="#FF3A3A3A">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="0">
+
+                <Custom:MapControl 
+                x:Name="mapaRUTA" 
+                MapServiceToken="UbyVV4Ma5EM8zXJ44OZi~E0q2RVZqdjQ2CX1z9HHMZw~AlQ1dCMOGkoxR9h0Gctn4QncW1KHvfVz_lvwqEobK-U2fcAQBw9z5hi9gWV6i2NU"/>
+
+            </Grid>
+
+       </Grid>
+        
+    </Grid>
+
+</Page>
