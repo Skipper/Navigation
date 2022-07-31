@@ -132,7 +132,7 @@
 
                 <Custom:MapControl 
                 x:Name="mapaRUTA" 
-                MapServiceToken="UbyVV4Ma5EM8zXJ44OZi~E0q2RVZqdjQ2CX1z9HHMZw~AlQ1dCMOGkoxR9h0Gctn4QncW1KHvfVz_lvwqEobK-U2fcAQBw9z5hi9gWV6i2NU"/>
+                MapServiceToken="YOUR_API_KEY_HERE"/>
 
             </Grid>
 
